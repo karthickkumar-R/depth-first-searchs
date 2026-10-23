@@ -1,6 +1,6 @@
 <h1>ExpNo 2 : Implement Depth First Search Traversal of a Graph</h1> 
-<h3>Name: </h3>
-<h3>Register Number:     </h3>
+<h3>Name:Karthickkumar R</h3>
+<h3>Register Number: 212223040087 </h3>
 <H3>Aim:</H3>
 <p> To Implement Depth First Search Traversal of a Graph using Python 3.</p>
 <h3>Theory:</h3>
@@ -55,38 +55,52 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
 </ol></B>
 
 <hr>
-<h3>Sample Input</h3>
-<hr>
-8 9 <BR>
-A B <BR>
-A C <BR>
-B E <BR>
-C D <BR>
-B D <BR>
-C G <BR>
-D F <BR>
-G F <BR>
-F H <BR>
-<hr>
-<h3>Sample Output</h3>
-<hr>
-['A', 'B', 'E', 'D', 'C', 'G', 'F', 'H']
-
+<h3>Source code</h3>
 <hr>
 
+```
+graph = {}
+
+data = input().split()
+n = int(data[0])
+e = int(data[1])
+
+for i in range(e):
+    u = data[2 + i * 2]
+    v = data[3 + i * 2]
+
+    if u not in graph:
+        graph[u] = []
+    if v not in graph:
+        graph[v] = []
+
+    graph[u].append(v)
+    graph[v].append(u)
+
+start = data[2 + e * 2]
+visited = []
+
+def dfs(node):
+    visited.append(node)
+
+    for neighbour in graph[node]:
+        if neighbour not in visited:
+            dfs(neighbour)
+
+dfs(start)
+
+print("Depth First Search:")
+print(visited)
+```
 <hr>
-<h3>Sample Input</h3>
+<h3>Output</h3>
 <hr>
-5 5 <BR>
-0 1 <BR>
-0 2 <BR>
-0 3 <BR>
-2 3 <BR>
-2 4 <BR>
+<img width="447" height="120" alt="image" src="https://github.com/user-attachments/assets/e93448c5-b477-4aae-b409-7f6dfa20d085" />
+
 <hr>
-<h3>Sample Output</h3>
+<h3>Result:</h3>
 <hr>
-['0', '1', '2', '3', '4']
+<p>Thus,a Graph was constructed and implementation of Depth First Search for the same graph was done successfully.</p>
 
 <hr>
 <h3>Result:</h3>
