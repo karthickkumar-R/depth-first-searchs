@@ -60,7 +60,7 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
 </ol></B>
 
 <hr>
-<h3>Source code</h3>
+<h3>Source code:</h3>
 <hr>
 
 ```
@@ -98,7 +98,7 @@ print("Depth First Search:")
 print(visited)
 ```
 <hr>
-<h3>Output</h3>
+<h3>Output:</h3>
 <hr>
 <img width="447" height="120" alt="image" src="https://github.com/user-attachments/assets/e93448c5-b477-4aae-b409-7f6dfa20d085" />
 
